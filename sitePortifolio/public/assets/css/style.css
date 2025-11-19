@@ -1,0 +1,262 @@
+/* Portfolio Card Styles */
+.portfolio-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  transform: translateY(-4px) scale(1.02);
+}
+.portfolio-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.portfolio-info {
+  padding: 18px 16px 10px 16px;
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+  min-height: 80px;
+}
+.portfolio-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.portfolio-desc {
+  font-size: 0.98rem;
+  color: #555;
+}
+.portfolio-icons {
+  display: flex;
+  align-items: center;
+}
+.portfolio-icons a {
+  color: #1976d2;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+.portfolio-icons a:hover {
+  background: #e3f0ff;
+  color: #0d47a1;
+}
+/* Contact Info Block */
+.contact-info-block {
+  margin-top: 24px;
+}
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #e3f0ff;
+  color: #1976d2;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.contact-info-block h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.contact-info-block p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0;
+}
+/* Resume Timeline Styles */
+#resume .resume-timeline {
+  position: relative;
+  margin-left: 18px;
+  padding-left: 18px;
+  border-left: 2px solid #1976d2;
+}
+#resume .resume-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+#resume .resume-dot {
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 2px solid #1976d2;
+  border-radius: 50%;
+  z-index: 1;
+}
+#resume .resume-date {
+  font-size: 0.95rem;
+  color: #1976d2;
+  font-weight: 500;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+#resume h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #222;
+}
+/* Skills Section */
+#skills .progress {
+  background: #eee;
+  border-radius: 4px;
+  box-shadow: none;
+}
+#skills .progress-bar {
+  transition: width 1.2s cubic-bezier(.77,0,.18,1);
+}
+/* Fade-in animation for sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(.77,0,.18,1), transform 0.8s cubic-bezier(.77,0,.18,1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(.77,0,.18,1), transform 0.8s cubic-bezier(.77,0,.18,1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+.btn {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.btn:hover {
+  box-shadow: 0 4px 16px rgba(13,110,253,0.15);
+  transform: translateY(-2px) scale(1.05);
+}
+/* Modern Portfolio Styles */
+body {
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.nav-link {
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(120deg, rgba(13,110,253,0.12) 0%, rgba(108,99,255,0.10) 100%);
+  z-index: 1;
+}
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+#hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+#hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+#hero .btn {
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+}
+#about img {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+#about h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#about ul {
+  list-style: none;
+  padding: 0;
+}
+#about ul li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+#portfolio .card {
+  border: none;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#portfolio .card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+#portfolio .card-title {
+  font-weight: 600;
+}
+#contact form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+#contact .btn {
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+}
+footer {
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.navbar-scrolled {
+  background: #fff !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  transition: background 0.3s, box-shadow 0.3s;
+}
