@@ -1,4 +1,4 @@
-# 🌐 Portfólio — UnluckWall
+# 🌐 Portfólio 
 
 Bem-vindo ao meu portfólio!  
 Este projeto foi desenvolvido para apresentar meus trabalhos, minhas habilidades e minha evolução como desenvolvedor.
