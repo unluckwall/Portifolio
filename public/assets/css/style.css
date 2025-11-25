@@ -166,6 +166,135 @@ body {
   background: #f8f9fa;
   color: #222;
 }
+.main-content {
+  margin-left: 220px; /* default space for desktop sidebar */
+  transition: margin-left 0.25s ease-in-out;
+}
+
+/* Mobile toggle - hidden by default, shown on small screens via utility class */
+.mobile-toggle {
+  display: none; /* visible on small screens using bootstrap helper classes */
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 1060;
+  background: #0d6efd;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Sidebar overlay -- hidden by default */
+.sidebar-overlay {
+  display: none;
+}
+
+/* --- Small-screen / Mobile specific styles --- */
+@media (max-width: 767.98px) {
+  /* Hide the left-space margin on mobile */
+  .main-content {
+    margin-left: 0 !important;
+  }
+
+  /* Make the fixed sidebar hidden off-canvas by default */
+  #sidebar {
+    width: 220px; /* keep width but slide it out */
+    transform: translateX(-100%);
+    transition: transform 0.25s ease-in-out;
+    z-index: 1070;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  }
+
+  /* When .sidebar-open is added to body, bring the sidebar into view */
+  body.sidebar-open #sidebar {
+    transform: translateX(0);
+  }
+
+  /* Overlay to dim page when sidebar open */
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0,0,0,0.45);
+    z-index: 1065;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s;
+  }
+  body.sidebar-open .sidebar-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* show a touch-friendly toggle button (we used d-md-none on it) */
+  .mobile-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 1.05rem;
+  }
+
+  /* Tweak hero for phones so it doesn't scroll awkwardly */
+  #hero {
+    min-height: 70vh;
+    padding: 3rem 1rem;
+    align-items: center;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+
+  /* Make other sections more compact on small screens */
+  #about .container,
+  #skills .container,
+  #portfolio .container,
+  #resume .container,
+  #contact .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #contact form {
+    padding: 1rem;
+  }
+
+  .portfolio-title {
+    font-size: 1rem;
+  }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* stack portfolio cards full width */
+  .portfolio-card {
+    width: 100%;
+  }
+
+  /* small adjustments for resume timeline */
+  #resume .resume-timeline {
+    margin-left: 12px;
+    padding-left: 12px;
+  }
+}
+
+/* Medium screens: adjust margin to use smaller space */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .main-content {
+    margin-left: 220px;
+  }
+
+  #hero h1 { font-size: 2.2rem; }
+  #hero p { font-size: 1.1rem; }
+}
 .navbar {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }

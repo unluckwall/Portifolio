@@ -62,4 +62,37 @@ document.addEventListener('DOMContentLoaded', function() {
       navbar.classList.remove('navbar-scrolled');
     }
   });
+
+  // Mobile sidebar toggle
+  var body = document.body;
+  var toggle = document.getElementById('mobile-sidebar-toggle');
+  var overlay = document.getElementById('sidebar-overlay');
+  var sidebar = document.getElementById('sidebar');
+
+  function openSidebar() {
+    body.classList.add('sidebar-open');
+    // for accessibility
+    sidebar && sidebar.setAttribute('aria-hidden', 'false');
+    overlay && overlay.setAttribute('aria-hidden', 'false');
+  }
+  function closeSidebar() {
+    body.classList.remove('sidebar-open');
+    sidebar && sidebar.setAttribute('aria-hidden', 'true');
+    overlay && overlay.setAttribute('aria-hidden', 'true');
+  }
+
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      if (body.classList.contains('sidebar-open')) closeSidebar(); else openSidebar();
+    });
+  }
+
+  if (overlay) overlay.addEventListener('click', closeSidebar);
+
+  // Close sidebar when a nav link is clicked on mobile
+  document.querySelectorAll('#sidebar a.nav-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth < 768) closeSidebar();
+    });
+  });
 });
