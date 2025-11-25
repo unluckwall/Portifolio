@@ -44,9 +44,8 @@ O site foi projetado para funcionar corretamente em:
 - 📟 **Tablets**
 - 💻 **Notebooks**
 - 🖥 **Monitores grandes**
-- 
+  
 ## 💬 Contato
-
 - **GitHub:** https://github.com/UnluckWall
 - **LinkedIn:** https://www.linkedin.com/in/victor-hugo-sousa-de-oliveira-7a1b4a312/
 - **Email:** victor.hs.oliveira@outlook.com
